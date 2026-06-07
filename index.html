@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PazExplora — La Paz, Bolivia</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-brand">
+      <span class="nav-icon">🗺️</span>
+      <span class="nav-title">PazExplora</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#features">Características</a></li>
+      <li><a href="#screens">Pantallas</a></li>
+      <li><a href="#tech">Tecnologías</a></li>
+      <li><a href="#about">Equipo</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Menú">☰</button>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <span class="badge">Proyecto académico · UNIFRANZ 2026</span>
+      <h1>Descubre lo mejor<br>de <span class="highlight">La Paz</span></h1>
+      <p class="hero-sub">App móvil de geolocalización turística para explorar restaurantes, sitios históricos y entretenimiento en La Paz, Bolivia.</p>
+      <div class="hero-buttons">
+        <a href="#screens" class="btn btn-primary">Ver pantallas</a>
+        <a href="#tech" class="btn btn-outline">Ver tecnologías</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-num" data-target="128">0</span>
+          <span class="stat-label">Lugares</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num" data-target="3">0</span>
+          <span class="stat-label">Categorías</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num" data-target="2">0</span>
+          <span class="stat-label">Roles de usuario</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-phone">
+      <div class="phone-frame">
+        <div class="phone-screen">
+          <div class="mock-header">
+            <span>PazExplora</span>
+            <span class="mock-dot"></span>
+          </div>
+          <div class="mock-search">🔍 Buscar lugares...</div>
+          <div class="mock-cards">
+            <div class="mock-card" style="--delay: 0s">🏛️ Mirador Killi Killi<span class="mock-rating">★ 4.8</span></div>
+            <div class="mock-card" style="--delay: 0.1s">🍽️ Mercado Lanza<span class="mock-rating">★ 4.5</span></div>
+            <div class="mock-card" style="--delay: 0.2s">🎭 Teatro Municipal<span class="mock-rating">★ 4.6</span></div>
+          </div>
+          <div class="mock-nav">
+            <span>🏠</span><span>🔍</span><span>❤️</span><span>🗺️</span><span>👤</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="features" id="features">
+    <div class="container">
+      <h2 class="section-title">Características principales</h2>
+      <p class="section-sub">Todo lo que necesitas para explorar La Paz desde tu teléfono</p>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">📍</div>
+          <h3>Geolocalización en tiempo real</h3>
+          <p>Encuentra tu posición GPS y calcula rutas reales a cualquier lugar con OSRM, sin necesidad de API key.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🗺️</div>
+          <h3>Mapa interactivo</h3>
+          <p>Visualiza todos los lugares en un mapa OpenStreetMap con marcadores por categoría y rutas a pie o en auto.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🔍</div>
+          <h3>Búsqueda y filtros</h3>
+          <p>Filtra por categoría (turismo, gastronomía, entretenimiento) y calificación mínima en tiempo real.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">❤️</div>
+          <h3>Favoritos y reseñas</h3>
+          <p>Guarda tus lugares preferidos y deja reseñas con calificación. El rating se actualiza automáticamente.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🏪</div>
+          <h3>Panel de negocios</h3>
+          <p>Los dueños de negocios pueden registrar, editar y gestionar sus locales con fotos desde cámara o galería.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🔐</div>
+          <h3>Autenticación por roles</h3>
+          <p>Dos tipos de cuenta: usuario explorador y administrador de negocio, cada uno con su propio flujo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PANTALLAS -->
+  <section class="screens" id="screens">
+    <div class="container">
+      <h2 class="section-title">Pantallas de la app</h2>
+      <p class="section-sub">5 pestañas principales más un panel de administración</p>
+      <div class="screens-tabs">
+        <button class="tab-btn active" data-tab="inicio">Inicio</button>
+        <button class="tab-btn" data-tab="explorar">Explorar</button>
+        <button class="tab-btn" data-tab="mapa">Mapa</button>
+        <button class="tab-btn" data-tab="favoritos">Favoritos</button>
+        <button class="tab-btn" data-tab="admin">Admin</button>
+      </div>
+      <div class="screens-content">
+        <div class="tab-panel active" id="tab-inicio">
+          <div class="screen-info">
+            <h3>Pantalla de inicio</h3>
+            <p>Muestra el saludo al usuario, una barra de búsqueda rápida, estadísticas generales (128 lugares, 3 categorías), un mapa mini, categorías populares y lugares destacados en tarjetas horizontales.</p>
+            <ul class="screen-details">
+              <li>✓ Estadísticas de lugares disponibles</li>
+              <li>✓ Acceso rápido al mapa completo</li>
+              <li>✓ Tarjetas de lugares destacados</li>
+              <li>✓ Navegación a otras pestañas</li>
+            </ul>
+          </div>
+          <div class="screen-preview" style="--color: #6C3DD6">
+            <div class="preview-header">🏠 Inicio</div>
+            <div class="preview-body">
+              <div class="preview-row">¡Hola, Usuario! 👋</div>
+              <div class="preview-search">🔍 Buscar lugares...</div>
+              <div class="preview-stats-row">
+                <span class="ps">📍 128</span>
+                <span class="ps">🍽 86</span>
+                <span class="ps">🏛 42</span>
+                <span class="ps">🎭 35</span>
+              </div>
+              <div class="preview-map-mini">🗺️ La Paz, Bolivia</div>
+              <div class="preview-cards-h">
+                <div class="pch">🍽 Restaurantes</div>
+                <div class="pch">🏛 Turismo</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-panel" id="tab-explorar">
+          <div class="screen-info">
+            <h3>Pantalla explorar</h3>
+            <p>Lista de lugares con búsqueda en tiempo real, filtros por categoría mediante chips y filtros avanzados (calificación mínima) en un bottom sheet. Muestra cuántos resultados coinciden.</p>
+            <ul class="screen-details">
+              <li>✓ Búsqueda por nombre, descripción y dirección</li>
+              <li>✓ Filtro por categoría con chips</li>
+              <li>✓ Filtro por calificación mínima</li>
+              <li>✓ Navegación al detalle del lugar</li>
+            </ul>
+          </div>
+          <div class="screen-preview" style="--color: #E8430A">
+            <div class="preview-header">🔍 Explorar</div>
+            <div class="preview-body">
+              <div class="preview-search">🔍 Buscar lugares...</div>
+              <div class="preview-chips">
+                <span class="chip active">Todos</span>
+                <span class="chip">Turismo</span>
+                <span class="chip">Gastronomía</span>
+              </div>
+              <div class="preview-list">
+                <div class="pl">🏛️ Mirador Killi Killi <span>★ 4.8</span></div>
+                <div class="pl">🍽️ Mercado Lanza <span>★ 4.5</span></div>
+                <div class="pl">🎭 Teatro Municipal <span>★ 4.6</span></div>
+              </div>
+              <div class="preview-count">4 lugares encontrados</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-panel" id="tab-mapa">
+          <div class="screen-info">
+            <h3>Pantalla de mapa y rutas</h3>
+            <p>Mapa interactivo con OpenStreetMap. Muestra marcadores por categoría, obtiene la posición GPS del usuario y traza rutas reales en auto o a pie usando OSRM con instrucciones paso a paso.</p>
+            <ul class="screen-details">
+              <li>✓ Mapa OpenStreetMap con CartoDB Voyager</li>
+              <li>✓ Rutas reales con OSRM (sin API key)</li>
+              <li>✓ Modo auto 🚗 y a pie 🚶</li>
+              <li>✓ Instrucciones de navegación</li>
+            </ul>
+          </div>
+          <div class="screen-preview" style="--color: #1D9E75">
+            <div class="preview-header">🗺️ Mapa de rutas</div>
+            <div class="preview-body">
+              <div class="preview-map-full">
+                <div class="map-pin" style="top:35%; left:40%">📍 Yo</div>
+                <div class="map-pin blue" style="top:55%; left:65%">🏛️ Destino</div>
+                <div class="map-line"></div>
+                <div class="map-label">La Paz, Bolivia</div>
+              </div>
+              <div class="preview-route-info">
+                <span>🚗 Auto</span>
+                <span>2.3 km</span>
+                <span>8 min</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-panel" id="tab-favoritos">
+          <div class="screen-info">
+            <h3>Pantalla de favoritos</h3>
+            <p>Muestra los lugares marcados como favoritos por el usuario, guardados en Firestore. Tiene dos pestañas: Lugares y Rutas (próximamente). Al tocar un lugar abre el detalle completo.</p>
+            <ul class="screen-details">
+              <li>✓ Lista de favoritos desde Firestore</li>
+              <li>✓ Toggle de favorito desde el detalle</li>
+              <li>✓ Rating y categoría visible</li>
+              <li>✓ Pestaña de rutas guardadas (próximo)</li>
+            </ul>
+          </div>
+          <div class="screen-preview" style="--color: #D4537E">
+            <div class="preview-header">❤️ Favoritos</div>
+            <div class="preview-body">
+              <div class="preview-tabs2">
+                <span class="pt2 active">Lugares</span>
+                <span class="pt2">Rutas</span>
+              </div>
+              <div class="preview-list">
+                <div class="pl">❤️ Mirador Killi Killi <span>★ 4.8</span></div>
+                <div class="pl">❤️ Museo del Oro <span>★ 4.7</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-panel" id="tab-admin">
+          <div class="screen-info">
+            <h3>Panel de administración</h3>
+            <p>Flujo exclusivo para dueños de negocios. Permite registrar, editar y eliminar locales con fotos (cámara/galería subidas a Cloudinary) y selección de ubicación en mapa interactivo.</p>
+            <ul class="screen-details">
+              <li>✓ CRUD de negocios propio</li>
+              <li>✓ Subida de fotos a Cloudinary</li>
+              <li>✓ Selector de ubicación en mapa</li>
+              <li>✓ Estado: Publicado / Pendiente</li>
+            </ul>
+          </div>
+          <div class="screen-preview" style="--color: #534AB7">
+            <div class="preview-header">🏪 Mis negocios</div>
+            <div class="preview-body">
+              <div class="preview-biz-card">
+                <div class="biz-img">📷</div>
+                <div class="biz-info">
+                  <strong>Mi Restaurante</strong>
+                  <span class="biz-status ok">✓ Publicado</span>
+                </div>
+              </div>
+              <div class="preview-biz-card">
+                <div class="biz-img">📷</div>
+                <div class="biz-info">
+                  <strong>Café Central</strong>
+                  <span class="biz-status pend">⏳ Pendiente</span>
+                </div>
+              </div>
+              <button class="preview-btn">+ Agregar negocio</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TECNOLOGÍAS -->
+  <section class="tech" id="tech">
+    <div class="container">
+      <h2 class="section-title">Stack tecnológico</h2>
+      <p class="section-sub">Tecnologías modernas para una app robusta y escalable</p>
+      <div class="tech-grid">
+        <div class="tech-card">
+          <div class="tech-logo">📱</div>
+          <h4>Flutter / Dart</h4>
+          <p>Framework principal para desarrollo móvil multiplataforma (Android/iOS).</p>
+        </div>
+        <div class="tech-card">
+          <div class="tech-logo">🔥</div>
+          <h4>Firebase</h4>
+          <p>Authentication para login por roles y Firestore como base de datos en tiempo real.</p>
+        </div>
+        <div class="tech-card">
+          <div class="tech-logo">☁️</div>
+          <h4>Cloudinary</h4>
+          <p>Almacenamiento y CDN de imágenes con upload directo desde el dispositivo.</p>
+        </div>
+        <div class="tech-card">
+          <div class="tech-logo">🗺️</div>
+          <h4>OpenStreetMap</h4>
+          <p>Tiles de mapa gratuitos con flutter_map y CartoDB Voyager como capa base.</p>
+        </div>
+        <div class="tech-card">
+          <div class="tech-logo">🛣️</div>
+          <h4>OSRM</h4>
+          <p>Motor de rutas open-source. Rutas reales en auto y a pie sin API key.</p>
+        </div>
+        <div class="tech-card">
+          <div class="tech-logo">📦</div>
+          <h4>Geolocator</h4>
+          <p>Acceso al GPS del dispositivo con manejo de permisos y precisión alta.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="container about-inner">
+      <div class="about-text">
+        <span class="badge">Sobre el proyecto</span>
+        <h2>Desarrollado en UNIFRANZ</h2>
+        <p>PazExplora es un proyecto académico desarrollado como parte del 5.° semestre de Ingeniería de Sistemas en la <strong>Universidad Privada Franz Tamayo</strong>, La Paz, Bolivia.</p>
+        <p>El objetivo es crear una plataforma de geolocalización turística que conecte a los visitantes y residentes de La Paz con los mejores lugares de la ciudad, ayudando también a pequeños negocios a tener presencia digital.</p>
+        <div class="about-meta">
+          <div class="meta-item">
+            <span class="meta-label">Desarrollador</span>
+            <span class="meta-val">Carlos Brandon Quispe Tapia</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Docente</span>
+            <span class="meta-val">Ing. Julio César Gómez Rodas</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Universidad</span>
+            <span class="meta-val">UNIFRANZ La Paz · 2026</span>
+          </div>
+        </div>
+      </div>
+      <div class="about-visual">
+        <div class="city-card">
+          <div class="city-img">🏔️</div>
+          <div class="city-name">La Paz, Bolivia</div>
+          <div class="city-alt">3,640 m s. n. m.</div>
+          <div class="city-coords">16°30′S 68°9′O</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="nav-icon">🗺️</span>
+        <span class="nav-title">PazExplora</span>
+      </div>
+      <p class="footer-copy">© 2026 Carlos Brandon Quispe Tapia · UNIFRANZ · La Paz, Bolivia</p>
+      <p class="footer-copy">Proyecto académico · Ingeniería de Sistemas · 5.° Semestre</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
